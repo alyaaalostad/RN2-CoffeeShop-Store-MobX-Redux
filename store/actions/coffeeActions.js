@@ -14,7 +14,11 @@ export const getCoffeeShops = () => {
 };
 
 export const setCoffeeShopsLoading = () => {
-  return {
-    dispatch({type: COFFEESHOPS_LOADING})
+  return async dispatch => {
+    try {
+      dispatch({ type: COFFEESHOPS_LOADING });
+    } catch (error) {
+      console.error(error);
+    }
   };
 };

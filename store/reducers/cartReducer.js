@@ -1,10 +1,9 @@
-// import { GET_COFFEESHOPS, COFFEESHOPS_LOADING } from "../actions/types";
-
+import * as actionTypes from "../actions/types";
 const initialState = {
   items: []
 };
 
-const reducer = (state = initialState, { type, payload }) => {
+const reducer = (state = initialState, type) => {
   switch (type) {
     default:
       return state;
